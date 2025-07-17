@@ -10,6 +10,9 @@ namespace PracticeWebApi.Data
         }
 
         public DbSet<Employees> Employees { get; set; }
+        public DbSet<Departments> Departments { get; set; }
+
+      
 
     }
 }

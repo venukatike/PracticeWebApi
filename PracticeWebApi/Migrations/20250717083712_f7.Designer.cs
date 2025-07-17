@@ -10,8 +10,8 @@ using PracticeWebApi.Data;
 namespace PracticeWebApi.Migrations
 {
     [DbContext(typeof(PracticeDbContext))]
-    [Migration("20250717055607_first")]
-    partial class first
+    [Migration("20250717083712_f7")]
+    partial class f7
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,21 @@ namespace PracticeWebApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("PracticeWebApi.Model.Departments", b =>
+                {
+                    b.Property<int>("DepartmentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DepartmentId");
+
+                    b.ToTable("Departments");
+                });
 
             modelBuilder.Entity("PracticeWebApi.Model.Employees", b =>
                 {

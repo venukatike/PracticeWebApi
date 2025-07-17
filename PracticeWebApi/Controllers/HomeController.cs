@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PracticeWebApi.Data;
+using PracticeWebApi.Model;
 
 namespace PracticeWebApi.Controllers
 {
@@ -50,7 +52,17 @@ namespace PracticeWebApi.Controllers
                                      })
                                     .ToList();
 
-            return departmentCounts;
+             var salary = context.Employees.Where(x => x.Salary>=50000).ToList();
+            // var salary = from variab in context.Employees where variab.Salary >= 50000 select variab;
+            // var salary = from e in context.Employees where e.Salary >= 50000 select e;
+
+            var ListNum = new List<int> { 1, 7, 9, 4, 2, 3, 4, 5, 6 };
+
+
+            var squared = ListNum.Select(x => x * 2).ToList();
+            var squaredM = from e in ListNum select e * 2;
+
+            return squaredM;
         }
     }
 }
