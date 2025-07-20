@@ -15,7 +15,7 @@ namespace WebApi.DotNetV8.Repository
         }
         public Employee GetEmployeeById(string id)
         {
-            return _context.Employees.Where(x => x.EmployeeId == id).FirstOrDefault();
+            return  _context.Employees.Where(x => x.EmployeeId == id).FirstOrDefault();
         }
         public async Task<List<EmployeeDto>> GetEmployees(int pageNumber, int pageSize)
         {

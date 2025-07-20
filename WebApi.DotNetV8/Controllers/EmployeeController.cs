@@ -22,6 +22,13 @@ namespace WebApi.DotNetV8.Controllers
         {
             return await _employee.GetEmployees(pageNumber,pageSize);
         }
+
+        [HttpGet("api/GetEmployee/{id}")]
+        public dynamic GetEmployeeById(string id)
+        {
+            return _employee.GetEmployeeById(id);
+        }
+
         [HttpGet("api/export-employees")]
         public async Task<IActionResult> ExportEmployees()
         {
