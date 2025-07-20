@@ -1,3 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using WebApi.DotNetV8.Controllers;
+using WebApi.DotNetV8.Data;
+using WebApi.DotNetV8.Repository;
+using WebApi.DotNetV8.Repository.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IEmployee, EmployeeRepo>();
+//builder.Services.AddScoped<IEmployee,EmployeeController>();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PracticeDBConnection")));
 
 var app = builder.Build();
 
