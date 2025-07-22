@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeWebApi", "PracticeW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.DotNetV8", "WebApi.DotNetV8\WebApi.DotNetV8.csproj", "{E2155288-A569-4028-9BC8-4767404FACFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPractice", "LINQPractice\LINQPractice.csproj", "{20228307-40E2-4C78-B350-D8F0C5DDE151}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E2155288-A569-4028-9BC8-4767404FACFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2155288-A569-4028-9BC8-4767404FACFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2155288-A569-4028-9BC8-4767404FACFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20228307-40E2-4C78-B350-D8F0C5DDE151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20228307-40E2-4C78-B350-D8F0C5DDE151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20228307-40E2-4C78-B350-D8F0C5DDE151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20228307-40E2-4C78-B350-D8F0C5DDE151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
