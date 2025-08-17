@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCoding", "CSharpCodin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csproj", "{89E1A932-0031-481F-9EBE-45525DFF3A4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst-V8", "CodeFirst-V8\CodeFirst-V8.csproj", "{9F04D173-1C9D-48AE-99F3-60E147B3F414}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{89E1A932-0031-481F-9EBE-45525DFF3A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89E1A932-0031-481F-9EBE-45525DFF3A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89E1A932-0031-481F-9EBE-45525DFF3A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
