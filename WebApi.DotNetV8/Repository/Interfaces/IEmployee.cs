@@ -1,4 +1,5 @@
-﻿using WebApi.DotNetV8.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApi.DotNetV8.DTOs;
 using WebApi.DotNetV8.Models;
 
 namespace WebApi.DotNetV8.Repository.Interfaces
@@ -9,6 +10,8 @@ namespace WebApi.DotNetV8.Repository.Interfaces
         Task<List<Employee>> GetEmployeesExport();
         Employee GetEmployeeById(string id);
 
+        List<Employee> GetEmployees_nth_HighestSalary(int nth_HighestSalary);
+        IActionResult PostTheEmployee(Employee employee);
         
     }
 }

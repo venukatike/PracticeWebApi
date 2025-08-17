@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using WebApi.DotNetV8.Controllers;
 using WebApi.DotNetV8.Data;
 using WebApi.DotNetV8.Repository;
+using WebApi.DotNetV8.Repository.Entity;
 using WebApi.DotNetV8.Repository.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEmployee, EmployeeRepo>();
+builder.Services.AddScoped<IAccounts, AccountsRepo>();
 //builder.Services.AddScoped<IEmployee,EmployeeController>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>

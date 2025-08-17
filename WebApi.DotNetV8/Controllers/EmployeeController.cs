@@ -29,21 +29,20 @@ namespace WebApi.DotNetV8.Controllers
             return _employee.GetEmployeeById(id);
         }
 
-        [HttpGet("api/export-employees")]
-        public async Task<IActionResult> ExportEmployees()
+
+        [HttpGet("api/GetEmployees_nth_HighestSalary/{nth_HighestSalary}")]
+        public dynamic GetEmployees_nth_HighestSalary(int nth_HighestSalary)
         {
-            var employees = await _employee.GetEmployeesExport();
+            return _employee.GetEmployees_nth_HighestSalary(nth_HighestSalary);
+        }
 
-            var sb = new StringBuilder();
-            sb.AppendLine("Id,Name,Department,Salary");
 
-            foreach (var emp in employees)
-            {
-                sb.AppendLine($"{emp.EmployeeId},{emp.FirstName},{emp.Department},{emp.Salary}");
-            }
 
-            var bytes = Encoding.UTF8.GetBytes(sb.ToString());
-            return File(bytes, "text/csv", "employees.csv");
+
+        [HttpPost("api/Post")]
+        public dynamic PostTheEmployee(Employee employee)
+        {
+            return _employee.PostTheEmployee(employee);
         }
     }
 }

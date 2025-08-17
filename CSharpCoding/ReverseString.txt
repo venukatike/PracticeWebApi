@@ -1,0 +1,22 @@
+﻿// reverse a string
+
+public static string ReverseString(string input)
+    {
+       string reverse = "";
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            reverse += input[i];
+
+        }
+        return reverse;
+
+    }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(ReverseString("Venu"));
+    }
+
+
+OutPut:  uneV

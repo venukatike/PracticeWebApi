@@ -12,13 +12,16 @@ namespace WebApi.DotNetV8.Data
 
         // Fixed the CS0236 error by converting the field to a property with a getter
         public DbSet<Employee> Employees { get; set; }
-
+        public DbSet<Account> accounts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Project>()
                 .HasOne(p => p.Employee)
                 .WithMany(e => e.Projects)
                 .HasForeignKey(p => p.EmployeeId);
+
+            modelBuilder.Entity<Account>().HasKey(e => e.PatNum);
+            
         }
     }
 }
