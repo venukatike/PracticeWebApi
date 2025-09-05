@@ -9,7 +9,7 @@ namespace CodeFirst_V8.Data
         {
         }
 
-        DbSet<Patient> patients { get; set; }
+       public DbSet<Patient> patients { get; set; }
         DbSet<CPT> refCPT { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -17,7 +17,7 @@ namespace CodeFirst_V8.Data
             base.OnModelCreating(modelBuilder);
 
             // Corrected the Ignore method usage to ignore the Patient entity type  
-            modelBuilder.Ignore<Patient>();
+         //   modelBuilder.Ignore<Patient>();
         }
     }
 }
