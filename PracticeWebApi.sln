@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst-V8", "CodeFirst-V8\CodeFirst-V8.csproj", "{9F04D173-1C9D-48AE-99F3-60E147B3F414}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{93BAC7D1-0C05-4D66-8CB6-13146AA2DA93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBP.api", "HBP.api\HBP.api.csproj", "{EF53DFE7-D57B-4E1B-9ACD-669E7FBF4591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F04D173-1C9D-48AE-99F3-60E147B3F414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BAC7D1-0C05-4D66-8CB6-13146AA2DA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BAC7D1-0C05-4D66-8CB6-13146AA2DA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BAC7D1-0C05-4D66-8CB6-13146AA2DA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BAC7D1-0C05-4D66-8CB6-13146AA2DA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF53DFE7-D57B-4E1B-9ACD-669E7FBF4591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF53DFE7-D57B-4E1B-9ACD-669E7FBF4591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF53DFE7-D57B-4E1B-9ACD-669E7FBF4591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF53DFE7-D57B-4E1B-9ACD-669E7FBF4591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
