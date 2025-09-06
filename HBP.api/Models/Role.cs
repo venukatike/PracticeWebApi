@@ -13,5 +13,5 @@ public partial class Role
 
     public DateTimeOffset CreatedAt { get; set; }
 
-    public virtual ICollection<AppUser> Users { get; set; } = new List<AppUser>();
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }
