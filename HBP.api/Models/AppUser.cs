@@ -35,5 +35,5 @@ public partial class AppUser
 
     public virtual ICollection<InsuranceVerification> InsuranceVerifications { get; set; } = new List<InsuranceVerification>();
 
-    public virtual ICollection<Role> Roles { get; set; } = new List<Role>();
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }
