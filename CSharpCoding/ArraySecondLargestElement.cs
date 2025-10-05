@@ -11,16 +11,16 @@ namespace CSharpCoding
         public static void SecondLargestElement(int[] arr)
         {
             int first = int.MinValue;  //-214847
-            int second = int.MinValue;  // -214847
+            int second = int.MinValue; //-214847
 
             for (int i = 0; i <= arr.Length - 1; i++)
             {
                 if (arr[i] > first)
                 {
-                    second = first;  //second = 20
+                    second = first;  
                     first = arr[i];  // first = 60
                 }
-                else if (arr[i] > second && arr[i] != first)
+                else if (arr[i] > first && arr[i] != second)
                 {
                     second = arr[i];
                 }
