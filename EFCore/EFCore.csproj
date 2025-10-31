@@ -21,11 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MyProject.Application\DTOs\" />
-    <Folder Include="MyProject.Application\Models\" />
-    <Folder Include="MyProject.Application\Services\" />
-    <Folder Include="MyProjectInfrastructure\Data\" />
-    <Folder Include="MyProjectInfrastructure\External API\" />
+    <Folder Include="API-ApiLayer\Models\" />
+    <Folder Include="Common- Domain\Entities\" />
+    <Folder Include="Common- Domain\DTOs\" />
+    <Folder Include="Common- Domain\Exceptions\" />
+    <Folder Include="Common- Domain\Helpers\" />
+    <Folder Include="Data_DataAccessLayer\Configurations\" />
   </ItemGroup>
 
 </Project>

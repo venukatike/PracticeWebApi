@@ -1,3 +1,4 @@
+using HBP.api.Application_ClassLibrary.Interfaces;
 using HBP.api.Data;
 using HBP.api.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ public class PatientController : ControllerBase
 {
     private readonly BillingDbContext _context;
     private readonly IPatientService pa;
-    public PatientController(BillingDbContext context, IPatientService _pa)
+    private readonly IAppUserService lpa;
+    public PatientController(BillingDbContext context, IPatientService _pa, IAppUserService _lpa)
     {
         _context = context;
         pa = _pa;
+        lpa = _lpa;
     }
 
     // GET: api/controller
@@ -27,6 +30,12 @@ public class PatientController : ControllerBase
     public dynamic GetAll()
     {
         return pa.Get();
+    }
+
+    [HttpGet("AllPw")]
+    public dynamic GetAllu()
+    {
+        return lpa.GetAll();
     }
 
     // GET: api/controller/{id}

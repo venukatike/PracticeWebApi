@@ -1,5 +1,9 @@
+using HBP.api.Application_ClassLibrary.Interfaces;
+using HBP.api.Application_ClassLibrary.Services;
 using HBP.api.Custom_Middlewares;
 using HBP.api.Data;
+using HBP.api.Domain_ClassLibrary.Interfaces;
+using HBP.api.Infrastucture_ClassLibrary.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPatient, PatientRepo>();
 builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IAppUserEntity,AppUserRepo>();
+builder.Services.AddScoped<IAppUserService,AppUserService>();
 builder.Services.AddScoped<BillingDbContext>();
 
 

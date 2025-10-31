@@ -8,25 +8,50 @@ namespace CSharpCoding
 {
     public static class ArraySecondLargestElement
     {
-        public static void SecondLargestElement(int[] arr)
+        public static int SecondLargestElement(int[] arr)
         {
-            int first = int.MinValue;  //-214847
-            int second = int.MinValue;  // -214847
+            int n = arr.Length;
 
-            for (int i = 0; i <= arr.Length - 1; i++)
+            // Sort the array in non-decreasing order
+            Array.Sort(arr);
+
+            // start from second last element as last element is the largest
+            for (int i = n - 2; i >= 0; i--)
             {
-                if (arr[i] > first)
+
+                // return the first element which is not equal to the 
+                // largest element
+                if (arr[i] != arr[n - 1])
                 {
-                    second = first;  //second = 20
-                    first = arr[i];  // first = 60
-                }
-                else if (arr[i] > second && arr[i] != first)
-                {
-                    second = arr[i];
+                    return arr[i];
                 }
             }
-            Console.WriteLine("second element is :" + second);
 
+            // If no second largest element was found, return -1
+            return -1;
         }
+
+
+
+
+
+        /*  int first = int.MinValue;  //-214847
+          int second = int.MinValue; //-214847
+
+          for (int i = 0; i <= arr.Length - 1; i++)
+          {
+              if (arr[i] > first)
+              {
+                  second = first;  
+                  first = arr[i];  // first = 60
+              }
+              else if (arr[i] > first && arr[i] != second)
+              {
+                  second = arr[i];
+              }
+          }
+          Console.WriteLine("second element is :" + second);
+        */
     }
 }
+
