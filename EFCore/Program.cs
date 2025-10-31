@@ -1,8 +1,10 @@
 using EFCore;
-using EFCore.MyProject.Application.Interfaces;
-using EFCore.MyProjectInfrastructure.Repositories;
-using EFCore.MyProjectInfrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using EFCore.MyProjectInfrastructure.Interface;
+using EFCore.Data_DataAccessLayer.Data;
+using EFCore.SharedServices_BussinessLayer.Interfaces;
+using EFCore.SharedServices_BussinessLayer.Services;
+using EFCore.API_ApiLayer.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-builder.Services.AddScoped<IPatient, PatientRepo>();
-builder.Services.AddScoped<PatientRepo>();
+builder.Services.AddScoped<IPatientRepo, PatientRepo>();
+builder.Services.AddScoped<IPatientService, PatientService>();
+
 
 
 var app = builder.Build();
@@ -25,6 +28,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<CustomMiddleware>();
 
 app.UseHttpsRedirection();
 
